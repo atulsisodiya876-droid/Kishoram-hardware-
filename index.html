@@ -4,24 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Keshoram Hardware | Jalalabad, Shamli</title>
-
-  <meta
-    name="description"
-    content="Keshoram Hardware - Water pumps, water tanks, pipes, wash basins, water taps and complete hardware products in Jalalabad, Shamli."
-  >
+  <title>Keshoram Hardware | Jalalabad</title>
 
   <style>
-
-    /* ==============================
-       BASIC RESET
-    ============================== */
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
     html {
@@ -29,539 +20,465 @@
     }
 
     body {
-      background: #f5f7fa;
-      color: #1d2939;
-      line-height: 1.6;
+      font-family: "DM Sans", sans-serif;
+      background: #11100e;
+      color: #f5f1e8;
     }
-
-    a {
-      text-decoration: none;
-    }
-
-    /* ==============================
-       COLORS
-    ============================== */
 
     :root {
-      --blue: #0b63ce;
-      --dark-blue: #073b7a;
-      --light-blue: #eaf3ff;
-      --orange: #ff8a00;
-      --dark: #102a43;
-      --white: #ffffff;
-      --gray: #667085;
-      --light: #f5f7fa;
+      --gold: #c9a45c;
+      --gold-light: #e5c987;
+      --black: #11100e;
+      --dark: #181714;
+      --cream: #f5f1e8;
+      --muted: #aaa49a;
+      --line: rgba(201,164,92,.25);
     }
 
-    /* ==============================
-       NAVBAR
-    ============================== */
+    /* ================= NAVBAR ================= */
 
-    .navbar {
+    nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-
       z-index: 1000;
 
-      background: rgba(255,255,255,0.96);
-
-      backdrop-filter: blur(10px);
-
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-
-      padding: 15px 7%;
+      padding: 20px 7%;
 
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+
+      background: rgba(17,16,14,.88);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid var(--line);
     }
 
     .logo {
-      color: var(--dark-blue);
-      font-size: 22px;
-      font-weight: 800;
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      color: var(--cream);
+      letter-spacing: 1px;
     }
 
     .logo span {
-      color: var(--orange);
+      color: var(--gold);
     }
 
     .nav-links {
-      list-style: none;
-
       display: flex;
-
-      gap: 28px;
+      gap: 30px;
+      list-style: none;
     }
 
     .nav-links a {
-      color: var(--dark);
-
-      font-size: 15px;
-
-      font-weight: 600;
-
-      transition: 0.3s;
+      color: #ddd7cb;
+      text-decoration: none;
+      font-size: 14px;
+      transition: .3s;
     }
 
     .nav-links a:hover {
-      color: var(--blue);
+      color: var(--gold-light);
     }
 
-    .menu-btn {
+    .menu {
       display: none;
-
-      border: none;
-
+      border: 0;
       background: none;
-
-      font-size: 28px;
-
+      color: white;
+      font-size: 27px;
       cursor: pointer;
-
-      color: var(--dark-blue);
     }
 
-    /* ==============================
-       HERO
-    ============================== */
+    /* ================= HERO ================= */
 
     .hero {
       min-height: 100vh;
-
-      padding: 130px 7% 80px;
+      padding: 140px 7% 80px;
 
       display: flex;
-
       align-items: center;
 
       background:
         linear-gradient(
-          110deg,
-          rgba(3,35,75,0.96),
-          rgba(9,95,190,0.82)
+          90deg,
+          rgba(17,16,14,.96) 0%,
+          rgba(17,16,14,.78) 48%,
+          rgba(17,16,14,.35) 100%
         ),
-        url("https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1800&q=85")
+        url("https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=1800&q=90")
         center/cover;
     }
 
     .hero-content {
-      max-width: 850px;
-
-      color: white;
+      max-width: 760px;
     }
 
-    .hero-badge {
-      display: inline-block;
-
-      padding: 8px 15px;
-
-      background: rgba(255,255,255,0.15);
-
-      border: 1px solid rgba(255,255,255,0.25);
-
-      border-radius: 30px;
-
-      margin-bottom: 20px;
-
-      font-size: 14px;
+    .small-title {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .hero h1 {
-      font-size: clamp(45px, 7vw, 75px);
-
-      line-height: 1.05;
-
-      margin-bottom: 20px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 8vw, 88px);
+      line-height: 1;
+      margin: 18px 0 22px;
     }
 
     .hero h1 span {
-      color: #ffd166;
+      color: var(--gold);
     }
 
     .hero p {
-      font-size: 19px;
-
-      color: #e8f2ff;
-
-      max-width: 700px;
-
-      margin-bottom: 30px;
+      color: #c5c0b7;
+      font-size: 18px;
+      max-width: 620px;
+      margin-bottom: 35px;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
-
-      gap: 15px;
-
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
-
       padding: 14px 25px;
-
-      border-radius: 8px;
-
+      border-radius: 4px;
+      text-decoration: none;
       font-weight: 700;
-
-      transition: 0.3s;
+      font-size: 14px;
+      transition: .3s;
     }
 
-    .btn-primary {
-      background: var(--orange);
-
-      color: white;
+    .btn-gold {
+      background: var(--gold);
+      color: #111;
     }
 
-    .btn-primary:hover {
-      background: #e47700;
-
+    .btn-gold:hover {
+      background: var(--gold-light);
       transform: translateY(-3px);
     }
 
-    .btn-white {
-      background: white;
-
-      color: var(--dark-blue);
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--cream);
     }
 
-    .btn-white:hover {
-      transform: translateY(-3px);
-
-      background: #f2f2f2;
+    .btn-outline:hover {
+      background: var(--gold);
+      color: #111;
     }
 
-    /* ==============================
-       GENERAL SECTION
-    ============================== */
+    /* ================= SECTIONS ================= */
 
     section {
-      padding: 85px 7%;
+      padding: 100px 7%;
     }
 
-    .section-title {
+    .heading {
       text-align: center;
-
       max-width: 700px;
-
-      margin: 0 auto 50px;
+      margin: 0 auto 55px;
     }
 
-    .section-title small {
-      color: var(--blue);
-
-      font-weight: 800;
-
+    .heading small {
+      color: var(--gold);
       text-transform: uppercase;
-
-      letter-spacing: 2px;
+      letter-spacing: 3px;
     }
 
-    .section-title h2 {
-      font-size: 42px;
-
-      margin: 8px 0;
+    .heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 46px;
+      margin: 10px 0;
     }
 
-    .section-title p {
-      color: var(--gray);
+    .heading p {
+      color: var(--muted);
     }
 
-    /* ==============================
-       PRODUCTS
-    ============================== */
+    /* ================= PRODUCTS ================= */
 
     .products {
-      background: white;
+      background: #151411;
     }
 
     .product-grid {
+      max-width: 1200px;
+      margin: auto;
+
       display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 22px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
-    .product-card {
-      background: white;
+    .product {
+      min-height: 220px;
+      padding: 28px;
 
-      border-radius: 14px;
+      background: #1b1a17;
 
-      padding: 25px;
+      border: 1px solid #2d2a24;
 
-      border: 1px solid #e5e7eb;
+      position: relative;
+      overflow: hidden;
 
-      text-align: center;
-
-      transition: 0.3s;
+      transition: .35s;
     }
 
-    .product-card:hover {
-      transform: translateY(-8px);
+    .product::after {
+      content: "";
+      position: absolute;
 
-      border-color: var(--blue);
+      width: 80px;
+      height: 80px;
 
-      box-shadow:
-        0 15px 35px rgba(0,0,0,0.10);
-    }
-
-    .product-icon {
-      width: 75px;
-      height: 75px;
-
-      margin: 0 auto 18px;
+      right: -25px;
+      bottom: -25px;
 
       border-radius: 50%;
 
-      background: var(--light-blue);
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      font-size: 38px;
+      background: rgba(201,164,92,.08);
     }
 
-    .product-card h3 {
-      color: var(--dark-blue);
+    .product:hover {
+      transform: translateY(-7px);
+      border-color: var(--gold);
+    }
 
+    .product-icon {
+      font-size: 42px;
+      margin-bottom: 22px;
+    }
+
+    .product h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 21px;
+      color: var(--cream);
       margin-bottom: 8px;
-
-      font-size: 19px;
     }
 
-    .product-card p {
-      color: var(--gray);
-
+    .product p {
+      color: var(--muted);
       font-size: 14px;
     }
 
-    /* ==============================
-       ABOUT
-    ============================== */
+    /* ================= ABOUT ================= */
 
     .about {
-      background: var(--light);
+      background: #0f0e0c;
     }
 
-    .about-container {
-      max-width: 1100px;
-
+    .about-wrap {
+      max-width: 1150px;
       margin: auto;
 
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
-      gap: 55px;
-
+      gap: 60px;
       align-items: center;
     }
 
-    .about-image img {
+    .about-img {
+      position: relative;
+    }
+
+    .about-img img {
       width: 100%;
-
-      height: 440px;
-
+      height: 480px;
       object-fit: cover;
+      filter: saturate(.75);
+    }
 
-      border-radius: 18px;
+    .about-img::before {
+      content: "";
+      position: absolute;
+
+      top: -12px;
+      left: -12px;
+
+      width: 80px;
+      height: 80px;
+
+      border-top: 2px solid var(--gold);
+      border-left: 2px solid var(--gold);
+
+      z-index: 2;
+    }
+
+    .about-text small {
+      color: var(--gold);
+      letter-spacing: 3px;
     }
 
     .about-text h2 {
-      font-size: 42px;
-
-      color: var(--dark);
-
-      margin-bottom: 18px;
+      font-family: "Playfair Display", serif;
+      font-size: 47px;
+      margin: 12px 0 20px;
     }
 
     .about-text h2 span {
-      color: var(--blue);
+      color: var(--gold);
     }
 
     .about-text p {
-      color: var(--gray);
-
+      color: var(--muted);
       margin-bottom: 15px;
     }
 
-    .points {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 12px;
-
+    .checks {
       margin: 25px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
     }
 
-    .point {
-      padding: 13px;
-
-      background: white;
-
-      border-radius: 8px;
-
-      font-weight: 600;
-
-      color: var(--dark-blue);
-
-      box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    .check {
+      color: #ddd7cb;
+      font-size: 14px;
     }
 
-    /* ==============================
-       WHY US
-    ============================== */
+    .check span {
+      color: var(--gold);
+      margin-right: 6px;
+    }
 
-    .why-us {
-      background: var(--dark-blue);
+    /* ================= WHY US ================= */
 
-      color: white;
+    .why {
+      background: #151411;
     }
 
     .why-grid {
-      max-width: 1100px;
-
+      max-width: 1000px;
       margin: auto;
 
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 25px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
     }
 
     .why-card {
+      padding: 35px 25px;
       text-align: center;
 
-      padding: 30px;
+      border: 1px solid #2c2924;
 
-      border: 1px solid rgba(255,255,255,0.15);
-
-      border-radius: 15px;
-
-      background: rgba(255,255,255,0.05);
+      background: #1b1a17;
     }
 
     .why-card .icon {
-      font-size: 40px;
-
-      margin-bottom: 12px;
+      font-size: 38px;
+      margin-bottom: 15px;
     }
 
     .why-card h3 {
-      margin-bottom: 8px;
-    }
-
-    .why-card p {
-      color: #cbdaf0;
-    }
-
-    /* ==============================
-       CONTACT
-    ============================== */
-
-    .contact {
-      background: white;
-    }
-
-    .contact-container {
-      max-width: 1100px;
-
-      margin: auto;
-    }
-
-    .contact-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 22px;
-
-      margin-bottom: 35px;
-    }
-
-    .contact-card {
-      padding: 30px;
-
-      text-align: center;
-
-      border: 1px solid #e5e7eb;
-
-      border-radius: 14px;
-    }
-
-    .contact-card .icon {
-      font-size: 35px;
-
+      font-family: "Playfair Display", serif;
       margin-bottom: 10px;
     }
 
-    .contact-card h3 {
-      color: var(--dark-blue);
+    .why-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
+    /* ================= CONTACT ================= */
+
+    .contact {
+      background:
+        linear-gradient(
+          rgba(17,16,14,.92),
+          rgba(17,16,14,.95)
+        ),
+        url("https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .contact-wrap {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-wrap h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 52px;
+      margin: 10px 0;
+    }
+
+    .contact-wrap > p {
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 15px;
+      margin-bottom: 35px;
+    }
+
+    .contact-box {
+      padding: 25px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+    }
+
+    .contact-box .icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .contact-box h3 {
+      color: var(--gold);
+      font-size: 16px;
       margin-bottom: 5px;
     }
 
-    .contact-card p {
-      color: var(--gray);
+    .contact-box p {
+      color: #ccc6bb;
+      font-size: 14px;
     }
 
-    .contact-buttons {
-      text-align: center;
-    }
-
-    /* ==============================
-       FOOTER
-    ============================== */
+    /* ================= FOOTER ================= */
 
     footer {
-      background: #061d3b;
-
-      color: #b9c8dc;
-
-      text-align: center;
-
       padding: 30px 7%;
+      text-align: center;
+      background: #0a0908;
+      color: #77736b;
+      font-size: 13px;
     }
 
     footer strong {
-      color: white;
+      color: var(--gold);
     }
 
-    /* ==============================
-       TOP BUTTON
-    ============================== */
+    /* ================= TOP BUTTON ================= */
 
-    #topBtn {
+    #top {
       position: fixed;
-
       right: 20px;
-
       bottom: 20px;
 
       width: 45px;
       height: 45px;
 
-      border: none;
+      border: 1px solid var(--gold);
+      background: #171612;
+      color: var(--gold);
 
       border-radius: 50%;
-
-      background: var(--orange);
-
-      color: white;
-
-      font-size: 20px;
 
       cursor: pointer;
 
@@ -570,17 +487,15 @@
       z-index: 999;
     }
 
-    /* ==============================
-       MOBILE
-    ============================== */
+    /* ================= RESPONSIVE ================= */
 
-    @media (max-width: 950px) {
+    @media(max-width: 950px) {
 
       .product-grid {
         grid-template-columns: 1fr 1fr;
       }
 
-      .about-container {
+      .about-wrap {
         grid-template-columns: 1fr;
       }
 
@@ -588,48 +503,49 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .contact-grid {
+      .contact-info {
         grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 650px) {
+    @media(max-width: 650px) {
 
-      .navbar {
-        padding: 15px 5%;
+      nav {
+        padding: 18px 5%;
       }
 
-      .menu-btn {
+      .menu {
         display: block;
       }
 
       .nav-links {
         position: absolute;
-
-        top: 67px;
+        top: 70px;
         left: 0;
 
         width: 100%;
 
-        background: white;
-
         display: none;
-
         flex-direction: column;
 
-        gap: 0;
+        background: #11100e;
 
-        text-align: center;
+        padding: 20px;
 
-        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        border-bottom: 1px solid var(--line);
       }
 
       .nav-links.active {
         display: flex;
       }
 
-      .nav-links li {
-        padding: 14px;
+      .nav-links a {
+        display: block;
+        padding: 10px;
+      }
+
+      section {
+        padding: 70px 5%;
       }
 
       .hero {
@@ -637,116 +553,88 @@
         padding-right: 5%;
       }
 
-      section {
-        padding: 65px 5%;
-      }
-
       .product-grid,
       .why-grid {
         grid-template-columns: 1fr;
       }
 
-      .points {
+      .checks {
         grid-template-columns: 1fr;
       }
 
-      .about-image img {
-        height: 320px;
+      .about-img img {
+        height: 350px;
       }
 
-      .section-title h2 {
-        font-size: 34px;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: flex-start;
+      .heading h2,
+      .contact-wrap h2 {
+        font-size: 36px;
       }
     }
-
   </style>
 </head>
 
-
 <body>
 
+  <!-- NAVBAR -->
 
-  <!-- ==============================
-       NAVBAR
-  ============================== -->
-
-  <nav class="navbar">
+  <nav>
 
     <a href="#home" class="logo">
       KESHORAM <span>HARDWARE</span>
     </a>
 
-    <button class="menu-btn" id="menuBtn">
+    <button class="menu" id="menuBtn">
       ☰
     </button>
 
     <ul class="nav-links" id="navLinks">
 
-      <li>
-        <a href="#home">Home</a>
-      </li>
-
-      <li>
-        <a href="#products">Products</a>
-      </li>
-
-      <li>
-        <a href="#about">About</a>
-      </li>
-
-      <li>
-        <a href="#why">Why Us</a>
-      </li>
-
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
 
     </ul>
 
   </nav>
 
 
-  <!-- ==============================
-       HERO
-  ============================== -->
+  <!-- HERO -->
 
   <header class="hero" id="home">
 
     <div class="hero-content">
 
-      <div class="hero-badge">
-        🏪 Trusted Hardware Store in Jalalabad
+      <div class="small-title">
+        Trusted Hardware Store • Jalalabad
       </div>
 
       <h1>
-        KESHORAM <span>HARDWARE</span>
+        Keshoram<br>
+        <span>Hardware.</span>
       </h1>
 
       <p>
-        पानी की मोटर, पानी की टंकी, पाइप, वॉश बेसिन,
-        पानी की टोंटी और हार्डवेयर का पूरा सामान —
-        सब एक ही जगह।
+        पानी की मोटर से लेकर पाइप, पानी की टंकी,
+        वॉश बेसिन, पानी की टोंटी और hardware का
+        पूरा सामान — आपकी जरूरत, एक ही जगह।
       </p>
 
-      <div class="hero-buttons">
+      <div class="buttons">
 
         <a
           href="tel:+918923353476"
-          class="btn btn-primary"
+          class="btn btn-gold"
         >
           📞 Call Now
         </a>
 
         <a
-          href="https://wa.me/918923353476?text=Namaste%20Keshoram%20Hardware%2C%20mujhe%20hardware%20products%20ke%20baare%20mein%20jaankari%20chahiye."
+          href="https://wa.me/918923353476?text=Namaste%20Keshoram%20Hardware%2C%20mujhe%20aapke%20products%20ke%20baare%20mein%20jaankari%20chahiye."
           target="_blank"
-          class="btn btn-white"
+          class="btn btn-outline"
         >
           💬 WhatsApp
         </a>
@@ -758,25 +646,19 @@
   </header>
 
 
-  <!-- ==============================
-       PRODUCTS
-  ============================== -->
+  <!-- PRODUCTS -->
 
   <section class="products" id="products">
 
-    <div class="section-title">
+    <div class="heading">
 
-      <small>Our Products</small>
+      <small>Our Collection</small>
 
-      <h2>
-        Hardware <span style="color:#0b63ce;">
-          Products
-        </span>
-      </h2>
+      <h2>Everything You Need.</h2>
 
       <p>
-        घर, दुकान और निर्माण कार्य के लिए
-        hardware और plumbing products.
+        Plumbing, water supply और hardware से
+        जुड़े जरूरी products.
       </p>
 
     </div>
@@ -784,154 +666,131 @@
 
     <div class="product-grid">
 
+      <div class="product">
 
-      <div class="product-card">
-
-        <div class="product-icon">
-          💧
-        </div>
+        <div class="product-icon">💧</div>
 
         <h3>पानी की मोटर</h3>
 
         <p>
-          Water pumps और पानी की मोटर की
-          अलग-अलग varieties उपलब्ध।
+          Water pumps और पानी की मोटर.
         </p>
 
       </div>
 
 
-      <div class="product-card">
+      <div class="product">
 
-        <div class="product-icon">
-          🛢️
-        </div>
+        <div class="product-icon">🛢️</div>
 
         <h3>पानी की टंकी</h3>
 
         <p>
-          घर और commercial use के लिए
+          घर और अन्य जरूरतों के लिए
           water tanks.
         </p>
 
       </div>
 
 
-      <div class="product-card">
+      <div class="product">
 
-        <div class="product-icon">
-          🔵
-        </div>
+        <div class="product-icon">🔵</div>
 
-        <h3>Water Pipes</h3>
+        <h3>पानी के पाइप</h3>
 
         <p>
-          पानी की supply के लिए
-          अलग-अलग size के pipes.
+          अलग-अलग जरूरतों और sizes के
+          water pipes.
         </p>
 
       </div>
 
 
-      <div class="product-card">
+      <div class="product">
 
-        <div class="product-icon">
-          🚰
-        </div>
+        <div class="product-icon">🚰</div>
 
         <h3>Water Taps</h3>
 
         <p>
-          Kitchen, bathroom और घर के लिए
+          Kitchen और bathroom के लिए
           water taps.
         </p>
 
       </div>
 
 
-      <div class="product-card">
+      <div class="product">
 
-        <div class="product-icon">
-          🚿
-        </div>
-
-        <h3>Bathroom Fittings</h3>
-
-        <p>
-          Bathroom और plumbing fittings
-          की wide range.
-        </p>
-
-      </div>
-
-
-      <div class="product-card">
-
-        <div class="product-icon">
-          🧼
-        </div>
+        <div class="product-icon">🧼</div>
 
         <h3>Wash Basin</h3>
 
         <p>
-          अलग-अलग designs और
-          bathroom wash basins.
+          Bathroom के लिए wash basin
+          और fittings.
         </p>
 
       </div>
 
 
-      <div class="product-card">
+      <div class="product">
 
-        <div class="product-icon">
-          🔧
-        </div>
+        <div class="product-icon">🚿</div>
+
+        <h3>Bathroom Fittings</h3>
+
+        <p>
+          Bathroom और sanitary fittings.
+        </p>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-icon">🔧</div>
 
         <h3>Plumbing Items</h3>
 
         <p>
-          Plumbing और fitting से जुड़ा
+          Plumbing और pipe fitting का
           जरूरी सामान.
         </p>
 
       </div>
 
 
-      <div class="product-card">
+      <div class="product">
 
-        <div class="product-icon">
-          🛠️
-        </div>
+        <div class="product-icon">🛠️</div>
 
-        <h3>Hardware Items</h3>
+        <h3>Hardware</h3>
 
         <p>
-          घर और construction के लिए
-          complete hardware सामान.
+          Hardware का पूरा range
+          उपलब्ध.
         </p>
 
       </div>
-
 
     </div>
 
   </section>
 
 
-  <!-- ==============================
-       ABOUT
-  ============================== -->
+  <!-- ABOUT -->
 
   <section class="about" id="about">
 
-    <div class="about-container">
+    <div class="about-wrap">
 
-
-      <div class="about-image">
+      <div class="about-img">
 
         <img
-          src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=1000&q=85"
-          alt="Hardware tools"
+          src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=1000&q=90"
+          alt="Keshoram Hardware"
         >
 
       </div>
@@ -939,50 +798,52 @@
 
       <div class="about-text">
 
+        <small>ABOUT KESHORAM HARDWARE</small>
+
         <h2>
-          आपका अपना
-          <span>Hardware Store</span>
+          भरोसे का सामान.<br>
+          <span>सही जगह.</span>
         </h2>
 
         <p>
-          Keshoram Hardware, Delhi Road, Jalalabad
-          (Shamli) में hardware और plumbing products
-          के लिए आपका भरोसेमंद store है।
+          Keshoram Hardware, Delhi Road,
+          Jalalabad (Shamli) में स्थित आपका
+          अपना hardware store है।
         </p>
 
         <p>
-          पानी की मोटर से लेकर pipes, water tanks,
-          wash basins, taps और अन्य hardware सामान
-          तक — हमारी कोशिश है कि आपको जरूरत का
-          सामान एक ही जगह मिल जाए।
+          पानी की मोटर, पानी की टंकी, pipes,
+          wash basin, water taps और plumbing
+          से लेकर hardware के कई जरूरी सामान
+          यहां मिलते हैं।
         </p>
 
 
-        <div class="points">
+        <div class="checks">
 
-          <div class="point">
-            ✅ Quality Products
+          <div class="check">
+            <span>✓</span> Quality Products
           </div>
 
-          <div class="point">
-            ✅ उचित दाम
+          <div class="check">
+            <span>✓</span> Wide Range
           </div>
 
-          <div class="point">
-            ✅ Wide Product Range
+          <div class="check">
+            <span>✓</span> Trusted Service
           </div>
 
-          <div class="point">
-            ✅ Trusted Service
+          <div class="check">
+            <span>✓</span> उचित दाम
           </div>
 
         </div>
 
         <a
           href="#contact"
-          class="btn btn-primary"
+          class="btn btn-gold"
         >
-          Contact Us
+          Visit Our Shop
         </a>
 
       </div>
@@ -992,25 +853,19 @@
   </section>
 
 
-  <!-- ==============================
-       WHY US
-  ============================== -->
+  <!-- WHY US -->
 
-  <section class="why-us" id="why">
+  <section class="why" id="why">
 
-    <div class="section-title">
+    <div class="heading">
 
-      <small style="color:#ffd166;">
-        Why Choose Us
-      </small>
+      <small>Why Choose Us</small>
 
-      <h2>
-        Keshoram Hardware
-      </h2>
+      <h2>Simple. Reliable. Trusted.</h2>
 
-      <p style="color:#cbdaf0;">
-        आपकी जरूरत के hardware products,
-        एक भरोसेमंद जगह पर।
+      <p>
+        हमारी कोशिश है कि आपको सही सामान
+        और अच्छा experience मिले।
       </p>
 
     </div>
@@ -1018,18 +873,15 @@
 
     <div class="why-grid">
 
-
       <div class="why-card">
 
-        <div class="icon">
-          🏆
-        </div>
+        <div class="icon">🏆</div>
 
         <h3>Quality</h3>
 
         <p>
           अच्छे और भरोसेमंद products
-          उपलब्ध कराने पर focus.
+          की range.
         </p>
 
       </div>
@@ -1037,15 +889,13 @@
 
       <div class="why-card">
 
-        <div class="icon">
-          💰
-        </div>
+        <div class="icon">💰</div>
 
-        <h3>Best Value</h3>
+        <h3>Value</h3>
 
         <p>
-          आपकी जरूरत और budget के
-          हिसाब से products.
+          आपकी जरूरत के हिसाब से
+          उचित विकल्प.
         </p>
 
       </div>
@@ -1053,61 +903,49 @@
 
       <div class="why-card">
 
-        <div class="icon">
-          🤝
-        </div>
+        <div class="icon">🤝</div>
 
-        <h3>Trusted Service</h3>
+        <h3>Trust</h3>
 
         <p>
-          Customers के साथ भरोसे और
-          अच्छे व्यवहार के साथ service.
+          Customers के साथ लंबे समय
+          का भरोसा.
         </p>
 
       </div>
-
 
     </div>
 
   </section>
 
 
-  <!-- ==============================
-       CONTACT
-  ============================== -->
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
-    <div class="contact-container">
+    <div class="contact-wrap">
 
-      <div class="section-title">
-
-        <small>Get In Touch</small>
-
-        <h2>
-          Visit <span style="color:#0b63ce;">
-            Keshoram Hardware
-          </span>
-        </h2>
-
-        <p>
-          Product की जानकारी या price पूछने के लिए
-          हमें call या WhatsApp करें।
-        </p>
-
+      <div class="small-title">
+        Come Visit Us
       </div>
 
+      <h2>
+        Keshoram Hardware
+      </h2>
 
-      <div class="contact-grid">
+      <p>
+        Product की जानकारी, price या availability
+        के लिए हमें call या WhatsApp करें।
+      </p>
 
 
-        <div class="contact-card">
+      <div class="contact-info">
 
-          <div class="icon">
-            📍
-          </div>
+        <div class="contact-box">
 
-          <h3>Our Location</h3>
+          <div class="icon">📍</div>
+
+          <h3>Address</h3>
 
           <p>
             Delhi Road,<br>
@@ -1118,13 +956,11 @@
         </div>
 
 
-        <div class="contact-card">
+        <div class="contact-box">
 
-          <div class="icon">
-            📞
-          </div>
+          <div class="icon">📞</div>
 
-          <h3>Call Us</h3>
+          <h3>Contact</h3>
 
           <p>
             8923353476
@@ -1133,42 +969,37 @@
         </div>
 
 
-        <div class="contact-card">
+        <div class="contact-box">
 
-          <div class="icon">
-            🕐
-          </div>
+          <div class="icon">🛠️</div>
 
-          <h3>Business Hours</h3>
+          <h3>Products</h3>
 
           <p>
-            Please call us<br>
-            for today's timings.
+            Motor • Tank • Pipe<br>
+            Wash Basin • Taps • Hardware
           </p>
 
         </div>
 
-
       </div>
 
 
-      <div class="contact-buttons">
+      <div class="buttons" style="justify-content:center;">
 
         <a
           href="tel:+918923353476"
-          class="btn btn-primary"
+          class="btn btn-gold"
         >
-          📞 Call Keshoram Hardware
+          📞 Call Now
         </a>
 
-
         <a
-          href="https://wa.me/918923353476?text=Namaste%20Keshoram%20Hardware%2C%20mujhe%20aapke%20products%20ke%20baare%20mein%20jaankari%20chahiye."
+          href="https://wa.me/918923353476?text=Namaste%20Keshoram%20Hardware%2C%20mujhe%20products%20ke%20baare%20mein%20jaankari%20chahiye."
           target="_blank"
-          class="btn"
-          style="background:#25D366;color:white;margin-left:10px;"
+          class="btn btn-outline"
         >
-          💬 WhatsApp Us
+          💬 WhatsApp
         </a>
 
       </div>
@@ -1178,50 +1009,35 @@
   </section>
 
 
-  <!-- ==============================
-       FOOTER
-  ============================== -->
+  <!-- FOOTER -->
 
   <footer>
 
-    <p>
-      © 2026
-      <strong>Keshoram Hardware</strong>.
-      All Rights Reserved.
-    </p>
-
-    <p>
-      Delhi Road, Jalalabad (Shamli), Uttar Pradesh
-    </p>
+    © 2026
+    <strong>Keshoram Hardware</strong>
+    • Delhi Road, Jalalabad (Shamli)
 
   </footer>
 
 
-  <!-- ==============================
-       BACK TO TOP
-  ============================== -->
+  <!-- BACK TO TOP -->
 
-  <button id="topBtn">
+  <button id="top">
     ↑
   </button>
 
 
-  <!-- ==============================
-       JAVASCRIPT
-  ============================== -->
+  <!-- JAVASCRIPT -->
 
   <script>
 
-    /* ==============================
-       MOBILE MENU
-    ============================== */
+    /* MOBILE MENU */
 
     const menuBtn =
       document.getElementById("menuBtn");
 
     const navLinks =
       document.getElementById("navLinks");
-
 
     menuBtn.addEventListener("click", () => {
 
@@ -1243,30 +1059,27 @@
       });
 
 
-    /* ==============================
-       BACK TO TOP
-    ============================== */
+    /* BACK TO TOP */
 
-    const topBtn =
-      document.getElementById("topBtn");
-
+    const topButton =
+      document.getElementById("top");
 
     window.addEventListener("scroll", () => {
 
-      if (window.scrollY > 400) {
+      if (window.scrollY > 450) {
 
-        topBtn.style.display = "block";
+        topButton.style.display = "block";
 
       } else {
 
-        topBtn.style.display = "none";
+        topButton.style.display = "none";
 
       }
 
     });
 
 
-    topBtn.addEventListener("click", () => {
+    topButton.addEventListener("click", () => {
 
       window.scrollTo({
 
@@ -1279,13 +1092,12 @@
     });
 
 
-    /* ==============================
-       SIMPLE SCROLL ANIMATION
-    ============================== */
+    /* SCROLL ANIMATION */
 
-    const cards = document.querySelectorAll(
-      ".product-card, .why-card, .contact-card"
-    );
+    const elements =
+      document.querySelectorAll(
+        ".product, .why-card, .contact-box"
+      );
 
 
     const observer =
@@ -1312,17 +1124,17 @@
       );
 
 
-    cards.forEach(card => {
+    elements.forEach(element => {
 
-      card.style.opacity = "0";
+      element.style.opacity = "0";
 
-      card.style.transform =
-        "translateY(25px)";
+      element.style.transform =
+        "translateY(30px)";
 
-      card.style.transition =
-        "opacity .6s ease, transform .6s ease";
+      element.style.transition =
+        "all .7s ease";
 
-      observer.observe(card);
+      observer.observe(element);
 
     });
 
